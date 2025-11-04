@@ -66,12 +66,33 @@
 									<div class="row">
 										<div class="col-5">
 											<div class="icon-big text-center">
-												<i class="flaticon-cart-1 text-danger"></i>
+												<i class="flaticon-home text-danger"></i>
 											</div>
 										</div>
 										<div class="col-7 col-stats">
 											<div class="numbers">
-												<p class="card-category">Products</p>
+												<p class="card-category">Rooms</p>
+												<h4 class="card-title"><?php echo $posts;?></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<a href="<?php echo base_url().'backend/Posts/managePosts';?>">
+							<div class="card card-stats card-round">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-5">
+											<div class="icon-big text-center">
+												<i class="flaticon-home text-danger"></i>
+											</div>
+										</div>
+										<div class="col-7 col-stats">
+											<div class="numbers">
+												<p class="card-category">Book Rooms</p>
 												<h4 class="card-title"><?php echo $posts;?></h4>
 											</div>
 										</div>

@@ -386,19 +386,25 @@
 						<li class="nav-item <?php if($this->router->fetch_class()=='Category' && $this->router->fetch_method()=='manageProductType'){?> active <?php }?>">
 							<a href="<?php echo site_url('backend/Category/manageProductType');?>">
 								<i class="fa fa-align-justify"></i> 
-								<p>Manage Product Type</p>
+								<p>Manage Room Type</p>
 							</a>
 						</li>
 						<li class="nav-item <?php if($this->router->fetch_class()=='Posts' && $this->router->fetch_method()=='managePosts'){?> active <?php }?>">
 							<a href="<?php echo site_url('backend/Posts/managePosts');?>">
 								<i class="fa fa-shopping-cart"></i> 
-								<p>Manage Product</p>
+								<p>Manage Room</p>
+							</a>
+						</li>
+						<li class="nav-item <?php if($this->router->fetch_class()=='Services' && $this->router->fetch_method()=='index'){?> active <?php }?>">
+							<a href="<?php echo site_url('Services');?>">
+								<i class="fa fa-list"></i> 
+								<p>Manage Services</p>
 							</a>
 						</li>
 						<li class="nav-item <?php if($this->router->fetch_class()=='OrderController' && $this->router->fetch_method()=='manageOrder'){?> active <?php }?>">
 							<a href="<?php echo site_url('backend/OrderController/manageOrder');?>">
 								<i class="fa fa-list"></i> 
-								<p>Manage Orders</p>
+								<p>Manage Booking</p>
 							</a>
 						</li>
 						
