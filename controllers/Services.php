@@ -11,7 +11,7 @@ class Services extends CI_Controller {
     }
 
     public function index() {
-        $data['page_title']='Add Hotel Services';
+        $data['page_title']='Manage Hotel Services';
         $data['services'] = $this->Service_model->get_all();
         $this->load->view('header',$data);
         $this->load->view('services/index', $data);
@@ -29,6 +29,8 @@ class Services extends CI_Controller {
     }
 
     private function _form($id = null) {
+        $data['page_title']='Add Hotel Services';
+
         $service = $id ? $this->Service_model->get($id) : null;
 
         $this->form_validation->set_rules('service_name', 'Service Name', 'required');
@@ -36,7 +38,11 @@ class Services extends CI_Controller {
 
         if ($this->form_validation->run() === FALSE) {
             $data['service'] = $service;
+             $this->load->view('header',$data);
             $this->load->view('services/form', $data);
+            $this->load->view('javascript',$data);
+        
+        $this->load->view('footer',$data);
         } else {
             $save_data = [
                 'service_name' => $this->input->post('service_name'),

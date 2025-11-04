@@ -34,9 +34,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($services as $service): ?>
+                        <?php $i=0; foreach ($services as $service): $i++;?>
                             <tr>
-                                <td><?= $service->id ?></td>
+                                <td><?= $i; ?></td>
                                 <td><?= $service->service_name ?></td>
                                 <td><?= $service->description ?></td>
                                 <td><?= number_format($service->price, 2) ?></td>
