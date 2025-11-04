@@ -21,42 +21,14 @@
     text-align: center;
 }
 </style>
-<div class="container-fluid" style="background-color:#f7f7f7;padding:5px;">
 
-    <div class="row" style="">
-         <div class="col-12">
-            <div class="product-container">
-                <div class="items">    
-                    <?php if(count($catData)>0){
-                            foreach($catData as $row){?>
-                                <!-- product item start -->
-                                <div class="item" >
-                                   <a href="<?php echo site_url("Welcome/getIndexProductList/".$row['category_id']);?>">
-                                            <img class="" src="<?php echo base_url().'assets/category/'.$row['category_image']?>" alt="product" style="width: 100%;height: 100%;">
-
-                                            <!-- <img class="sec-img" src="<?php //echo base_url().'assets/category/'.$row['category_image']?>" alt="product"> -->
-                                        </a><br/>
-                                        <p class="sec-img" style="font-size:11px;margin-top: 5px;"><?php echo $row['category_name'];?></p>
-                                </div>
-                               <!-- product item start -->
-
-                           <?php } 
-                            }?>
-                </div>
-            </div>
-           
-        </div>
-        
-        
-    
-    </div>
-</div>
         <!-- hero slider area start -->
         <section class="slider-area">
             <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
                 <!-- single slider item start -->
                 <div class="hero-single-slide hero-overlay">
-                    <div class="hero-slider-item bg-img" data-bg="<?php echo  base_url().'assets/site_banners/1.png'?>">
+                    <!-- <div class="hero-slider-item bg-img" data-bg="<?php //echo  base_url().'assets/site_banners/1.png'?>"> -->
+                    <div class="hero-slider-item bg-img" data-bg="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
@@ -129,7 +101,7 @@
         <div class="service-policy section-padding">
             <div class="container">
                 <div class="row mtn-30">
-                    <div class="col-sm-6 col-lg-3">
+                    <!-- <div class="col-sm-6 col-lg-3">
                         <div class="policy-item">
                             <div class="policy-icon">
                                 <i class="pe-7s-plane"></i>
@@ -139,8 +111,8 @@
                                 <p>Free shipping all order</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
+                    </div> -->
+                    <div class="col-sm-6 col-lg-4">
                         <div class="policy-item">
                             <div class="policy-icon">
                                 <i class="pe-7s-help2"></i>
@@ -151,7 +123,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3">
+                    <div class="col-sm-6 col-lg-4">
                         <div class="policy-item">
                             <div class="policy-icon">
                                 <i class="pe-7s-back"></i>
@@ -162,7 +134,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3">
+                    <div class="col-sm-6 col-lg-4">
                         <div class="policy-item">
                             <div class="policy-icon">
                                 <i class="pe-7s-credit"></i>
@@ -201,8 +173,8 @@
                     <div class="col-12">
                         <!-- section title start -->
                         <div class="section-title text-center">
-                            <h2 class="title">our products</h2>
-                            <p class="sub-title">Add our products to weekly lineup</p>
+                            <h2 class="title">our plans</h2>
+                            <p class="sub-title">Add our plans to weekly lineup</p>
                         </div>
                         <!-- section title start -->
                     </div>

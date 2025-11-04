@@ -24,7 +24,8 @@ class Welcome extends CI_Controller {
 	public function about()
 	{
 		$data['page_title']="About Us";
-		
+		// print_r($data);
+		// exit;
 		$this->load->view('front/header',$data);
 		$this->load->view('front/header_nav',$data);
 
@@ -51,21 +52,18 @@ class Welcome extends CI_Controller {
 	}
 	public function index($type="")
 	{
-		$data['page_title']="Home";
+		$data['page_title'] = "Home";
 		$logged_in = $this->session->userdata('logged_in');
 
-		if($type!=1)
-		{
-			$type=$type;
+		// Fix type assignment logic
+		$type = ($type != 1) ? $type : 1;
+
+		if (!empty($logged_in) && is_array($logged_in) && isset($logged_in['user_id'])) {
+		    $data['userData'] = $this->User_model->getUserInfoById($logged_in['user_id'], 0);
+		} else {
+		    $data['userData'] = null; // or handle it as needed
 		}
-		else
-		{
-			$type=1;
-		}
-		if(isset($logged_in))
-		{
-			$data['userData']=$user_exists=$this->User_model->getUserInfoById($logged_in['user_id'],0);
-		}
+
 
 			$data['catData']=$user_exists=$this->User_model->getAllCategory(1);
 			//$data['pTypeData']=$pTypeData=$this->User_model->getAllPTypeData(1,$type);
@@ -76,7 +74,7 @@ class Welcome extends CI_Controller {
 			$data['featureData']=$featureData=$this->User_model->getAllFeaturedData(1,5);
 		$data['pType']=$type;
 		$this->load->view('front/header',$data);
-		$this->load->view('front/categories',$data);
+		//$this->load->view('front/categories',$data);
 		$this->load->view('front/header_nav',$data);
 
 		$this->load->view('front/home_new',$data);
@@ -682,14 +680,22 @@ class Welcome extends CI_Controller {
 	}
 	public function getProductDetails($product_id)
 	{
-		$data['page_title']="Home";
+		$data['page_title'] = "Home";
 		$logged_in = $this->session->userdata('logged_in');
-		//$type=$_POST['id'];
-		$product_id=base64_decode($product_id);
-		
-		$data['product_id']=$product_id;
-				$user_id = $logged_in['user_id'];
-		$data['user_id']=$user_id;
+		$product_id = base64_decode($product_id);
+
+		$data['product_id'] = $product_id;
+
+		// Initialize $user_id as null to avoid "undefined variable"
+		$user_id = null;
+
+		// Check if logged_in exists and is an array
+		if (!empty($logged_in) && is_array($logged_in) && isset($logged_in['user_id'])) {
+		    $user_id = $logged_in['user_id'];
+		}
+
+		// Assign user_id (will be null if not logged in)
+		$data['user_id'] = $user_id;
 		// if(isset($logged_in))
 		// {
 		// 	$data['userData']=$user_exists=$this->User_model->getUserInfoById($logged_in['user_id'],0);

@@ -21,7 +21,9 @@ exit;*/
                         <div class="col-lg-2">
                             <div class="logo">
                                 <a href="<?php echo  base_url();?>">
-                                    <img src="<?php echo  base_url().'assets/img/wanoway.jpeg'?>" alt="Brand Logo" style="max-height: 100px;max-width: 100%;">
+                                    <!-- <img src="<?php //echo  base_url().'assets/img/wanoway.jpeg'?>" alt="Brand Logo" style="max-height: 100px;max-width: 100%;"> -->
+                                    <!-- <img src="<?php //echo  base_url().'assets/img/wanoway.jpeg'?>" alt="Brand Logo" style="max-height: 100px;max-width: 100%;"> -->
+                                    <h4>Test Logo</h4>
                                 </a>
                             </div>
                         </div>
