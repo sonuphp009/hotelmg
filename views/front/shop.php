@@ -368,11 +368,11 @@
                                             <div class="custom-control custom-radio">
                                                 <input type="hidden" name="address_selected" value="<?php echo $address_id;?>">
                                                 <input type="radio" id="cashon" name="paymentmethod" value="cash" class="custom-control-input" checked />
-                                                <label class="custom-control-label" for="cashon">Cash On Delivery</label>
+                                                <label class="custom-control-label" for="cashon">Cash On Restaurent</label>
                                             </div>
                                         </div>
                                         <div class="payment-method-details" data-method="cash">
-                                            <p>Pay with cash upon delivery.</p>
+                                            <p>Pay with cash on restaurent.</p>
                                         </div>
                                     </div>
                                    
@@ -389,7 +389,7 @@
                                         </div>
                                     </div>
                                      <div class="single-input-item">
-                                        <label for="ordernote">Order Note</label>
+                                        <label for="ordernote">Booking Order Note</label>
                                         <textarea name="ordernote" id="ordernote" cols="30" rows="3" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                                     </div>
                                     <div class="summary-footer-area">

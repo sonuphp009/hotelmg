@@ -145,7 +145,7 @@
                                         <div class="product-countdown" data-countdown="2022/12/20"></div> -->
                                         <div class="availability">
                                             <i class="fa fa-check-circle"></i>
-                                            <span>200 in stock</span>
+                                            <span>room status</span>
                                         </div>
                                         
                                         <div class="quantity-cart-box d-flex align-items-center">
@@ -154,7 +154,7 @@
                                                 <div class="pro-qty"><input type="text" value="1" id="product_qty" name="product_qty"></div>
                                             </div>
                                             <div class="action_link">
-                                                <a class="btn btn-cart2" href="#" onclick="getProductAddToCart()">Add to cart</a>
+                                                <a class="btn btn-cart2" href="#" onclick="getProductAddToCart()">Book Room</a>
                                             </div>
                                         </div>
                                         <div class="pro-size">
